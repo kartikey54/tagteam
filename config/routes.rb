@@ -189,6 +189,8 @@ Rails.application.routes.draw do
       get :deny
     end
     resources :users, only: :index
+
+    resources :settings, only: %i[new create update]
   end
 
   root 'hubs#home'
