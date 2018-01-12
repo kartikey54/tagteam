@@ -103,6 +103,7 @@ Rails.application.routes.draw do
       get 'statistics'
       get 'notifications'
       get 'settings'
+      get 'scoreboard'
       post 'add_roles'
       post 'remove_roles'
       post 'request_rights'
