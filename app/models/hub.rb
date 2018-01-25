@@ -274,4 +274,9 @@ class Hub < ApplicationRecord
 
     ActsAsTaggableOn::Tag.where(id: filters.map(&:tag_id))
   end
+
+  def fetch_deprecated_tags
+    tags = all_tag_filters.where(type: "DeleteTagFilter", scope_type: "Hub").select(:tag_id)
+    ActsAsTaggableOn::Tag.where(id: tags)
+  end
 end
