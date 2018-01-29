@@ -44,7 +44,7 @@
     = documentation('hub-statistics')
     = link_to('Statistics', statistics_hub_path(@hub) )
     .nav-pill-arrow
-- if current_user && @hub.enable_tag_scoreboard
+- if @hub.enable_tag_scoreboard
   %li{:class => "#{'active' if active == 'scoreboard'}"}
     = documentation('hub-scoreboard')
     = link_to('Scoreboard', scoreboard_hub_path(@hub) )
